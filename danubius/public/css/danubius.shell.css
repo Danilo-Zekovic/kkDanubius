@@ -5,33 +5,10 @@
  * My CSS
  */
 
-nav {
-  border-radius: 0px;
-}
+/* Header */
 
-.main-container {
-  margin-top: 14px;
-}
-
-.container:not(#top-navbar) {
-  position : relative;  
-  background-color : orange;
-}
-
-/*#top-navbar {
-  background-color: transparent;
-}*/
-
-.submit {
-  padding : 1em;
-}
-
-li:hover {
-  background-color : #080808;
-}
-
-h1 {
-  background-color: #333;
+.header-pic h1 {
+  background-color: #eee;
   color: #222;
   font: bold 80px "arial";
   height: 200px;
@@ -45,8 +22,15 @@ h1 {
   margin-bottom: 0;
 }
 
-p {
-  margin-top: 25px;
+
+/* Navbar */
+
+li:hover {
+  background-color : #080808;
+}
+
+nav {
+  border-radius: 0px;
 }
 
 .nav-container {
@@ -106,11 +90,42 @@ p {
      
   width: 100%;
 }
-  
+
+/* Main */
+
+#main {
+  margin-top: 14px;
+}
+
+.main-content {
+  background-color: orange;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.main-content p {
+  margin : 5%;
+  font-weight: bold;
+  color : #000000;
+}
+
+.container:not(#top-navbar, .foo) {
+  position : relative;  
+  background-color : orange;
+}
+ 
 .fix-body {
   /* this will adjust body top margin to prevent content jumping when nav gets fix  */    
   margin-top: 50px;
 }
+
+
+
+/** 
+  * Mobile devices
+  * small screen
+  */
 
 @media (max-width:768px) {
   .container:not(#top-navbar) {
@@ -121,10 +136,6 @@ p {
     margin-top: 29px;
   }
 
-  /*#top-navbar {
-    background-color: transparent;
-  }*/
-
   #danubius {
     position : static;
     min-height : 100%;
@@ -132,5 +143,7 @@ p {
   }
   .header-pic {
     height: 0;
+    visibility: hidden;
+
   }
 }
