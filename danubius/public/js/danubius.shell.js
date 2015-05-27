@@ -108,9 +108,9 @@
 
   // When screen resized some classes should be added and some removed
   screenChange = function () {
-    $(window).resize(function(){
+    jq(window).resize(function(){
 
-      console.log("Screen is resized <<<<<<<<<<<<<<<<<<<<<<<<<<<----- " + $(this).width());
+      console.log("Screen is resized <<<<<<<<<<<<<<<<<<<<<<<<<<<----- " + jq(this).width());
 
       /*
        * the number compared should be 768
@@ -118,13 +118,13 @@
        * that is why I lovered the number by 15
        * TODO
        */
-      var size = ($(this).width() > 768) ? true : false;
-      var mobile = ($(this).width() <= 768) ? true : false;
+      var size = (jq(this).width() > 768) ? true : false;
+      var mobile = (jq(this).width() <= 768) ? true : false;
 console.log("Screen is resized <<<<<<<<<<<<<<<<<<<<<<<<<<< " + size + "  -----  " + mobile);
-      $('nav').toggleClass("navbars", size);
-      $('nav').toggleClass("navbar-fixed-top", mobile);
+      jq('nav').toggleClass("navbars", size);
+      jq('nav').toggleClass("navbar-fixed-top", mobile);
 
-      $('#top-navbar').toggleClass("navb", size);
+      jq('#top-navbar').toggleClass("navb", size);
 
       // call the function when the screan is not less then 764
       if (size) screenScroll();
@@ -135,17 +135,17 @@ console.log("Screen is resized <<<<<<<<<<<<<<<<<<<<<<<<<<< " + size + "  -----  
   /* if it is not a mobile device it will be performed when screen is scroled */
   screenScroll = function () {
     /* to deal with the header and navbar movement */
-    var navb = $('.navb');
+    var navb = jq('.navb');
     var pos = navb.offset().top;   // get the offset distance from the top
       console.log(pos + " offset value");
     /* gets run when scrolling happens */  
-    $(window).scroll(function () {
+    jq(window).scroll(function () {
       // if it is scroled more then offset of the navbar, set fix to true
-      var fix = ($(this).scrollTop() > pos) ? true : false;
+      var fix = (jq(this).scrollTop() > pos) ? true : false;
       // if fix is true add specific class to it, and remove it if it is false
-      $('nav').toggleClass("navbar-fixed-top", fix);
-      navb.toggleClass("fix-nav", fix);  // causes the navbar to be alighned left
-      $('body').toggleClass("fix-body", fix);
+      jq('nav').toggleClass("navbar-fixed-top", fix);
+      //navb.toggleClass("fix-nav", fix);  // causes the navbar to be alighned left
+      jq('body').toggleClass("fix-body", fix);
     });
   }
 
