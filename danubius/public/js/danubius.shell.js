@@ -20,7 +20,7 @@
       main_html : String()
   + '<div class="header-pic">'
     + '<h1 class="header-pic">'
-      + 'You Shall Not Pass'
+      + 'Kosarkaski Klub Danubius'
     + '</h1>'
   + '</div>'
   + '<nav class="navbar navbar-inverse navbars">'
@@ -37,55 +37,19 @@
       + '</div>'
       + '<div id="navbar" class="navbar-collapse collapse" aria-expanded="false" styleheight: 1px;">'
         + '<ul class="nav navbar-nav">'
-            + '<li><a href="#" >Pocetna</a></li>'
-            + '<li><a href="#/selekcije" >Selekcije</a></li>'
-            + '<li><a href="#/takmicenja" >Takmicenja</a></li>'
-            + '<li><a href="#/galerija" >Galerija</a></li>'
-            + '<li><a href="#/treneri" >Treneri</a></li>'
-            + '<li><a href="#/o-klubu" >O Klubu</a></li>'
-            + '<li><a href="#/kontant" >Kontakt</a></li>'
+            + '<li><a href="#/"><i class="fa fa-home"></i>  Pocetna</a></li>'
+            + '<li><a href="#/selekcije"><i class="fa fa-child"></i>  Selekcije</a></li>'
+            + '<li><a href="#/takmicenja"><i class="fa fa-trophy"></i>  Takmicenja</a></li>'
+            + '<li><a href="#/galerija"><i class="fa fa-camera-retro"></i>  Galerija</a></li>'
+            + '<li><a href="#/treneri"><i class="fa fa-users"></i>  Treneri</a></li>'
+            + '<li><a href="#/o-klubu"><i class="fa fa-shield"></i>  O Klubu</a></li>'
+            + '<li><a href="#/kontant"><i class="fa fa-envelope"></i>  Kontakt</a></li>'
         + '</ul>'
       + '</div>'
     + '</div>'
   + '</nav>'
-  + '<div class="container main-container">'
-    + '<p>DANUBIUS1</p>'
-    + '<p>DANUBIUS2</p>'
-    + '<p>DANUBIUS3</p>'
-    + '<p>DANUBIUS4</p>'
-    + '<p>DANUBIUS5</p>'
-    + '<p>DANUBIUS6</p>'
-    + '<p>DANUBIUS7</p>'
-    + '<p>DANUBIUS8</p>'
-    + '<p>DANUBIUS9</p>'
-    + '<p>DANUBIUS10</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
+  + '<div id="main" class="container main-container" ng-view>'
+    + '<div ng-view></div>'
   + '</div>'
     },
     stateMap = { $container : null },
@@ -110,7 +74,7 @@
   screenChange = function () {
     jq(window).resize(function(){
 
-      console.log("Screen is resized <<<<<<<<<<<<<<<<<<<<<<<<<<<----- " + jq(this).width());
+//console.log("Screen is resized <<<<<<<<<<<<<<<<<<<<<<<<<<<----- " + jq(this).width());
 
       /*
        * the number compared should be 768
@@ -120,7 +84,7 @@
        */
       var size = (jq(this).width() > 768) ? true : false;
       var mobile = (jq(this).width() <= 768) ? true : false;
-console.log("Screen is resized <<<<<<<<<<<<<<<<<<<<<<<<<<< " + size + "  -----  " + mobile);
+//console.log("Screen is resized <<<<<<<<<<<<<<<<<<<<<<<<<<< " + size + "  -----  " + mobile);
       jq('nav').toggleClass("navbars", size);
       jq('nav').toggleClass("navbar-fixed-top", mobile);
 
@@ -222,13 +186,10 @@ console.log("Screen is resized <<<<<<<<<<<<<<<<<<<<<<<<<<< " + size + "  -----  
   
   initModule = function ( $container ) {
     stateMap.$container = $container;
-    $container.html( configMap.main_html );
+    //$container.html( configMap.main_html );
     setJqueryMap();
 
     screenChange();
-
-  
-    // hideDiv();
     
   };
   
