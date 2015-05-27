@@ -1,0 +1,60 @@
+<!-- Danilo Zekovic -->
+
+<!doctype html>
+<!--
+  index.html
+-->
+
+<html>
+<head>
+  <!-- ie9+ rendering support for latest standards -->
+  <meta http-equiv="Content-Type" content="text/html;
+    charset=ISO-8859-1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>KK Danubius</title>
+  
+  <!-- determines the size of the device screen -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- third party stylesheets -->
+
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+
+
+  <!-- Latest compiled JavaScript bootstrap -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+  <!-- Latest compiled and minified CSS bootstrap -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+  <!-- AngularJS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="css/danubius.css"       type="text/css"/>
+  <link rel="stylesheet" href="css/danubius.shell.css" type="text/css"/>
+
+  <!-- javascript -->
+  <script src="js/danubius.js"       ></script>
+  <script src="js/danubius.shell.js" ></script>
+
+  <!-- JSON file -->
+  <!--script src="js/matchJson.js" ></script-->
+
+  <script>
+    var jq = jQuery.noConflict();
+    jq(function () { danubius.initModule( jq('#danubius') ); });
+  </script>
+
+</head>
+<body>
+  <div id="danubius"></div>
+</body>
+</html>
+
+
