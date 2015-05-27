@@ -5,7 +5,7 @@
   index.html
 -->
 
-<html>
+<html ng-app="kkDanubius">
 <head>
   <!-- ie9+ rendering support for latest standards -->
   <meta http-equiv="Content-Type" content="text/html;
@@ -34,14 +34,19 @@
 
   <!-- AngularJS -->
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 
   <!-- stylesheets -->
   <link rel="stylesheet" href="css/danubius.css"       type="text/css"/>
   <link rel="stylesheet" href="css/danubius.shell.css" type="text/css"/>
 
+  <!-- icons font-awesome -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
   <!-- javascript -->
   <script src="js/danubius.js"       ></script>
   <script src="js/danubius.shell.js" ></script>
+  <script src="js/script.js"></script>
 
   <!-- JSON file -->
   <!--script src="js/matchJson.js" ></script-->
@@ -52,8 +57,46 @@
   </script>
 
 </head>
-<body>
-  <div id="danubius"></div>
+
+<body ng-controller="mainCtrl">
+
+  <div id="danubius">
+
+    <div class="header-pic">
+      <h1 class="header-pic">
+        Kosarkaski Klub Danubius
+      </h1>
+    </div>
+
+    <nav class="navbar navbar-inverse navbars">
+      <div class="container navb" id="top-navbar">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#/">KK Danubius</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" styleheight: 1px;>
+          <ul class="nav navbar-nav">
+            <li><a href="#/"><i class="fa fa-home"></i>  Pocetna</a></li>
+            <li><a href="#/selekcije"><i class="fa fa-child"></i>  Selekcije</a></li>
+            <li><a href="#/takmicenja"><i class="fa fa-trophy"></i>  Takmicenja</a></li>
+            <li><a href="#/galerija"><i class="fa fa-camera-retro"></i>  Galerija</a></li>
+            <li><a href="#/treneri"><i class="fa fa-users"></i>  Treneri</a></li>
+            <li><a href="#/o-klubu"><i class="fa fa-shield"></i>  O Klubu</a></li>
+            <li><a href="#/kontant"><i class="fa fa-envelope"></i>  Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="main" class="container main-container" ng-view>
+      <div ng-view></div>
+    </div>
+  </div>
 </body>
 </html>
 
