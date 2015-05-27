@@ -33,20 +33,32 @@
           + '<span class="icon-bar"></span>'
           + '<span class="icon-bar"></span>'
         + '</button>'
-        + '<a class="navbar-brand" href="#">ExamApp</a>'
+        + '<a class="navbar-brand" href="#">KK Danubius</a>'
       + '</div>'
       + '<div id="navbar" class="navbar-collapse collapse" aria-expanded="false" styleheight: 1px;">'
         + '<ul class="nav navbar-nav">'
-            + '<li class="home"><a href="#" class="active">Home</a></li>'
-            + '<li class="matchbtn" ><a href="#/match" class="inactive">Match</a></li>'
-            + '<li><a class="page2" href="#/page2" >Nathan</a></li>'
-            + '<li><a class="page3" href="#/page3" >Craig</a></li>'
-            + '<li><a class="page4" href="#/page4" >Ryan</a></li>'
+            + '<li><a href="#" >Pocetna</a></li>'
+            + '<li><a href="#/selekcije" >Selekcije</a></li>'
+            + '<li><a href="#/takmicenja" >Takmicenja</a></li>'
+            + '<li><a href="#/galerija" >Galerija</a></li>'
+            + '<li><a href="#/treneri" >Treneri</a></li>'
+            + '<li><a href="#/o-klubu" >O Klubu</a></li>'
+            + '<li><a href="#/kontant" >Kontakt</a></li>'
         + '</ul>'
       + '</div>'
     + '</div>'
   + '</nav>'
   + '<div class="container main-container">'
+    + '<p>DANUBIUS1</p>'
+    + '<p>DANUBIUS2</p>'
+    + '<p>DANUBIUS3</p>'
+    + '<p>DANUBIUS4</p>'
+    + '<p>DANUBIUS5</p>'
+    + '<p>DANUBIUS6</p>'
+    + '<p>DANUBIUS7</p>'
+    + '<p>DANUBIUS8</p>'
+    + '<p>DANUBIUS9</p>'
+    + '<p>DANUBIUS10</p>'
     + '<p>DANUBIUS</p>'
     + '<p>DANUBIUS</p>'
     + '<p>DANUBIUS</p>'
@@ -74,33 +86,12 @@
     + '<p>DANUBIUS</p>'
     + '<p>DANUBIUS</p>'
     + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<p>DANUBIUS</p>'
-    + '<div class="container match"></div>'
-    + '<div class="container fillin"></div>'
-    + '<div class="container multiple-choice"></div>'
-    + '<div class="container true-false"></div>'
   + '</div>'
     },
     stateMap = { $container : null },
     jqueryMap = {},
-    // to keep track of visited pages
-    visited = {
-      home  : false,
-      match : false,
-      page2 : false,
-      page3 : false,
-      page4 : false
-    },
-    onTapList, hideDiv,
+    
+    hideDiv,
     setJqueryMap, initModule;
   //------------------END MODULE SCOPE VAR----------------
 
@@ -153,7 +144,7 @@ console.log("Screen is resized <<<<<<<<<<<<<<<<<<<<<<<<<<< " + size + "  -----  
       var fix = ($(this).scrollTop() > pos) ? true : false;
       // if fix is true add specific class to it, and remove it if it is false
       $('nav').toggleClass("navbar-fixed-top", fix);
-      //navb.toggleClass("fix-nav", fix);  // causes the navbar to be alighned left
+      navb.toggleClass("fix-nav", fix);  // causes the navbar to be alighned left
       $('body').toggleClass("fix-body", fix);
     });
   }
@@ -166,16 +157,7 @@ console.log("Screen is resized <<<<<<<<<<<<<<<<<<<<<<<<<<< " + size + "  -----  
     var $container = stateMap.$container;
     jqueryMap = {
       $container     : $container,
-      $menu          : $container.find('.cem-shell-list-menu'),
-      $mbt           : $container.find('.matchbtn'),
-      $p2bt          : $container.find('.page2'),
-      $p3bt          : $container.find('.page3'),
-      $p4bt          : $container.find('.page4'),
       $main          : $container.find('.main-container'),
-      $match         : $container.find('.match'),
-      $fillin        : $container.find('.fillin'),
-      $multchoice    : $container.find('.multiple-choice'),
-      $tf            : $container.find('.true-false'),
       $nav           : $container.find('.nav-navbar')
     }
   };  // end setJqueryMap
@@ -246,7 +228,7 @@ console.log("Screen is resized <<<<<<<<<<<<<<<<<<<<<<<<<<< " + size + "  -----  
     screenChange();
 
   
-    hideDiv();
+    // hideDiv();
     
   };
   
