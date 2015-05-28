@@ -15,7 +15,7 @@
 
 .header-pic h1 {
   background-color: #eee;
-  color: #222;
+  color: orange;
   font: bold 80px "arial";
   height: 200px;
   padding: 25px;
@@ -26,6 +26,12 @@
 .header-pic {
   margin-top : 0;
   margin-bottom: 0;
+/*
+  background-image: url("img/kk-danubius.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 10% 110%;;
+  background-size: 100%;*/
 }
 
 
