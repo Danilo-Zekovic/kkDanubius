@@ -42,10 +42,9 @@
     min-height       : 500px;
     min-width        : 500px;
     overflow         : hidden;
-    background-color : #fff;
+    
     border-radius    : 0 0 0 0;
-    background-image: url("img/floor.jpg");
-    background-attachment: fixed;
+    
   }
 
 /** End danubius namespace selectors */
