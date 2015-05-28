@@ -80,15 +80,40 @@
           </button>
           <a class="navbar-brand" href="#/">KK Danubius</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" styleheight: 1px;>
+        <div id="navbar" class="navbar-collapse collapse navbar-right" aria-expanded="false" styleheight: 1px;>
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#/"><i class="fa fa-home"></i>  Pocetna</a></li>
-            <li><a href="#/selekcije"><i class="fa fa-child"></i>  Selekcije</a></li>
-            <li><a href="#/takmicenja"><i class="fa fa-trophy"></i>  Takmicenja</a></li>
+            <li><a href="#/"><i class="fa fa-home"></i>  Pocetna</a></li>
+            
+            <li class="dropdown">
+              <a href="#/selekcije" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-child"></i>  Selekcije<span class="caret"></span></a>
+
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#/selekcije/2000-01">2000-01. Pioniri</a></li>
+                <li><a href="#/selekcije/1998-99">1998-99. Pioniri</a></li>
+                <li><a href="#/selekcije/2000-03">2000-03. Mladji Pioniri</a></li>
+                <li><a href="#/selekcije/mini-basket">Mini Basket</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#/takmicenja" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-trophy"></i>  Takmicenja<span class="caret"></span></a>
+
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#/takmicenja/1998-ksv">1998. KSV</a></li>
+                <li><a href="#/takmicenja/1999-ksv">1999. KSV</a></li>
+                <li><a href="#/takmicenja/1998-1999-viba">1998/1999. VIBA</a></li>
+                <li><a href="#/takmicenja/2000-ksv">2000. KSV</a></li>
+                <li><a href="#/takmicenja/2001-ksns">2001. KSNS</a></li>
+                <li><a href="#/takmicenja/2002-ksns">2002. KSNS</a></li>
+                <li><a href="#/takmicenja/2003-ksns">2003. KSNS</a></li>
+                
+              </ul>
+            </li>
+
             <li><a href="#/galerija"><i class="fa fa-camera-retro"></i>  Galerija</a></li>
             <li><a href="#/treneri"><i class="fa fa-users"></i>  Treneri</a></li>
             <li><a href="#/o-klubu"><i class="fa fa-shield"></i>  O Klubu</a></li>
-            <li><a href="#/kontant"><i class="fa fa-envelope"></i>  Kontakt</a></li>
+            <li><a href="#/kontakt"><i class="fa fa-envelope"></i>  Kontakt</a></li>
           </ul>
         </div>
       </div>
