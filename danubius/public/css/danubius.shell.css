@@ -5,6 +5,12 @@
  * My CSS
  */
 
+/* set background for the entire app */
+.kkdanubius{
+  background-image: url("img/floor.jpg");
+  background-attachment: fixed;
+}
+
 /* Header */
 
 .header-pic h1 {
@@ -135,21 +141,23 @@ nav {
 
 @media (max-width:768px) {
   .container:not(#top-navbar) {
-    position : absolute;
-    left : 0;
-    right : 0;
-    background-color : blue;
-    margin-top: 29px;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  .main-container{
+  	padding: 0;
   }
 
   #danubius {
     position : static;
     min-height : 100%;
     min-width  : 0;
+    padding-bottom: 0;
   }
+
   .header-pic {
     height: 0;
     visibility: hidden;
-
   }
 }
