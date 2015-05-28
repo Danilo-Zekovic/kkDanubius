@@ -26,21 +26,33 @@ kkDanubius.config(function($routeProvider) {
   })
 
   // route for the contact page
-  .when('/contact', {
-    templateUrl : 'pages/contact.html',
-    controller  : 'contactController'
+  .when('/takmicenja', {
+    templateUrl : 'js/pages/takmicenja.html',
+    controller  : 'takmicenjaCtrl'
   })
 
   //route for the danilo page
-  .when('/danilo',{
-   	templateUrl : 'pages/danilo.html',
-   	controller  : 'daniloController'
+  .when('/galerija',{
+   	templateUrl : 'js/pages/galerija.html',
+   	controller  : 'galerijaCtrl'
   })
 
   //route for .js file proba
-  .when('/proba',{
-   	templateUrl : 'pages/proba.js',
-   	controller  : 'probaController'
+  .when('/treneri',{
+   	templateUrl : 'js/pages/treneri.html',
+   	controller  : 'treneriCtrl'
+  })
+
+  //route for .js file proba
+  .when('/o-klubu',{
+   	templateUrl : 'js/pages/klub.html',
+   	controller  : 'klubCtrl'
+  })
+
+  //route for .js file proba
+  .when('/kontakt',{
+   	templateUrl : 'js/pages/kontakt.html',
+   	controller  : 'kontaktCtrl'
   });
 });
 
@@ -54,22 +66,28 @@ kkDanubius.controller('selekcijeCtrl', function($scope) {
   $scope.message = 'Look! I am an about page.';
 });
 
-kkDanubius.controller('contactController', function($scope) {
-  $scope.message = 'Contact us! JK. This is just a demo.';
+kkDanubius.controller('takmicenjaCtrl', function($scope) {
+  $scope.message = 'Contact us! JK. This is just a takmicenja page.';
 });
 
-kkDanubius.controller('daniloController', function($scope) {
+kkDanubius.controller('galerijaCtrl', function($scope) {
   $scope.message = 'I am Danilo the owner of this application';
 });
 
-kkDanubius.controller('probaController', function($scope) {
+kkDanubius.controller('treneriCtrl', function($scope) {
   $scope.message = 'Hopefully it works',
   $scope.doSomething = doSomething();
+});
+
+kkDanubius.controller('klubCtrl', function($scope) {
+  $scope.message = 'This is Kosrkaski Klub Danubius';
+});
+
+kkDanubius.controller('kontaktCtrl', function($scope) {
+  $scope.message = 'Call me kk Danubius';
 });
 
 // javascript function 
 var doSomething = function(){
   console.log("In the World!");
-  var something = "<p>Danilo Zekovic</p>";
-  jQuery(".foo").append('<p ng-scope>Danilo Zekovic</p>');
 };
