@@ -19,14 +19,69 @@ kkDanubius.config(function($routeProvider) {
     controller  : 'mainCtrl'
   })
 
-  // route for the about page
+  /*/ route for the about page
   .when('/selekcije', {
+    templateUrl : 'js/pages/selekcije.html',
+    controller  : 'selekcijeCtrl'
+  })*/
+
+  .when('/selekcije/2000-01', {
     templateUrl : 'js/pages/selekcije.html',
     controller  : 'selekcijeCtrl'
   })
 
-  // route for the contact page
+  .when('/selekcije/1998-99', {
+    templateUrl : 'js/pages/selekcije.html',
+    controller  : 'selekcijeCtrl'
+  })
+
+  .when('/selekcije/2000-03', {
+    templateUrl : 'js/pages/selekcije.html',
+    controller  : 'selekcijeCtrl'
+  })
+
+  .when('/selekcije/mini-basket', {
+    templateUrl : 'js/pages/selekcije.html',
+    controller  : 'selekcijeCtrl'
+  })
+
+  /*/ route for the contact page
   .when('/takmicenja', {
+    templateUrl : 'js/pages/takmicenja.html',
+    controller  : 'takmicenjaCtrl'
+  })*/
+
+  .when('/takmicenja/1998-ksv', {
+    templateUrl : 'js/pages/takmicenja.html',
+    controller  : 'takmicenjaCtrl'
+  })
+
+  .when('/takmicenja/1999-ksv', {
+    templateUrl : 'js/pages/takmicenja.html',
+    controller  : 'takmicenjaCtrl'
+  })
+
+  .when('/takmicenja/1998-1999-viba', {
+    templateUrl : 'js/pages/takmicenja.html',
+    controller  : 'takmicenjaCtrl'
+  })
+
+  .when('/takmicenja/2000-ksv', {
+    templateUrl : 'js/pages/takmicenja.html',
+    controller  : 'takmicenjaCtrl'
+  })
+
+  .when('/takmicenja/2001-ksns', {
+    templateUrl : 'js/pages/takmicenja.html',
+    controller  : 'takmicenjaCtrl'
+  })
+
+  .when('/takmicenja/2002-ksns', {
+    templateUrl : 'js/pages/takmicenja.html',
+    controller  : 'takmicenjaCtrl'
+  })
+
+  .when('/takmicenja/2003-ksns', {
     templateUrl : 'js/pages/takmicenja.html',
     controller  : 'takmicenjaCtrl'
   })
@@ -55,6 +110,13 @@ kkDanubius.config(function($routeProvider) {
    	controller  : 'kontaktCtrl'
   });
 });
+
+kkDanubius.run(function($rootScope, $location, $anchorScroll, $routeParams) {
+  $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+    $location.hash($routeParams.scrollTo);
+    $anchorScroll();  
+  });
+})
 
 // create the controller and inject Angular's $scope
 kkDanubius.controller('mainCtrl', function($scope) {
