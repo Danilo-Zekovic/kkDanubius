@@ -5,6 +5,12 @@
  * My CSS
  */
 
+ 
+
+ .row {
+
+ }
+
 /* set background for the entire app */
 .kkdanubius{
   background-image: url("img/floor.jpg");
@@ -85,7 +91,7 @@ nav {
   display: block;
   text-decoration: none;
   color: #333;
-  font-size: 1.1em;
+  font-size: 1.4em;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -118,8 +124,10 @@ nav {
 .main-content {
   background-color: orange;
   border: 1px solid black;
-  opacity: 0.6;
+  opacity: 0.8;
   filter:alpha(opacity=60); /* For IE8 and earlier */
+  padding: 1em;
+  margin-top: 2%;
 }
 
 .main-content p {
@@ -137,6 +145,45 @@ nav {
   /* this will adjust body top margin to prevent content jumping when nav gets fix  */    
   margin-top: 50px;
 }
+
+/*************************************************/
+/* Fade transition for carousel items */
+.carousel .item {
+    left: 0 !important;
+      -webkit-transition: opacity 2s; /*adjust timing here */
+         -moz-transition: opacity 2s;
+           -o-transition: opacity 2s;
+              transition: opacity 2s;
+}
+.carousel-control {
+    background-image: none !important; /* remove background gradients on controls */
+}
+/* Fade controls with items */
+.next.left,
+.prev.right {
+    opacity: 1;
+    z-index: 1;
+}
+.active.left,
+.active.right {
+    opacity: 0;
+    z-index: 2;
+}
+/**********************************************/
+
+.carousel-caption {
+   background-color : black;
+   width : 100%;
+   text-align : left;
+   padding : 1em;
+   left : 0;
+   bottom : 0;
+   height : 20%;
+   opacity : 0.5;
+
+ }
+
+
 
 /** 
   * Mobile devices
@@ -164,4 +211,8 @@ nav {
     height: 0;
     visibility: hidden;
   }
+
+  .carousel {
+  padding-top: 1em;
+}
 }
