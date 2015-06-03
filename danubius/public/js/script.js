@@ -19,11 +19,11 @@ kkDanubius.config(function($routeProvider) {
     controller  : 'mainCtrl'
   })
 
-  /*/ route for the about page
+  // route for the about page
   .when('/selekcije', {
     templateUrl : 'js/pages/selekcije.html',
     controller  : 'selekcijeCtrl'
-  })*/
+  })
 
   .when('/selekcije/2000-01', {
     templateUrl : 'js/pages/selekcije.html',
@@ -45,11 +45,11 @@ kkDanubius.config(function($routeProvider) {
     controller  : 'selekcijeCtrl'
   })
 
-  /*/ route for the contact page
+  // route for the contact page
   .when('/takmicenja', {
     templateUrl : 'js/pages/takmicenja.html',
     controller  : 'takmicenjaCtrl'
-  })*/
+  })
 
   .when('/takmicenja/1998-ksv', {
     templateUrl : 'js/pages/takmicenja.html',
@@ -126,6 +126,7 @@ kkDanubius.controller('mainCtrl', function($scope) {
 
 kkDanubius.controller('selekcijeCtrl', function($scope) {
   $scope.message = 'Look! I am an about page.';
+  $scope.pic = "kk-danubius.jpeg"
 });
 
 kkDanubius.controller('takmicenjaCtrl', function($scope) {
