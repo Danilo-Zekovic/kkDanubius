@@ -1,0 +1,61 @@
+[
+  {
+  	"slika"     : "http://www.kkdanubius.rs/images/slike/2000-2001.JPG", 
+  	"selekcija" : "Pioniri",
+  	"team"      : "Milos, Lazar, Vuk, Aleksandar, Stefan, Sava, Petar",
+  	"coach"     : "Zeka",
+  	"assistent" : "Vule",
+  	"leagues"   : "KSNS",
+  	"id" : "2000-01"
+  },
+
+  {
+  	"slika"     : "http://www.kkdanubius.rs/images/slike/2002%20(1).JPG",
+  	"selekcija" : "Kadeti",
+  	"team"      : "Milos, Lazar, Vuk, Aleksandar, Stefan, Sava, Petar",
+  	"coach"     : "Zeka",
+  	"assistent" : "Vule",
+  	"id" : "1998-99",
+  	"leagues"   : "KSNS" 
+  },
+
+  {
+  	"slika"     : "http://www.kkdanubius.rs/images/slike/skola-kosarke2002.jpg", 
+  	"selekcija" : "Juniori",
+  	"team"      : "Milos, Lazar, Vuk, Aleksandar, Stefan, Sava, Petar",
+  	"coach"     : "Zeka",
+  	"assistent" : "Vule",
+  	"id" : "2000-03",
+  	"leagues"   : "KSNS" 
+  },
+
+  {
+  	"slika"     : "http://www.kkdanubius.rs/images/slike/skola-kosarke2002.jpg", 
+  	"selekcija" : "Juniori",
+  	"team"      : "Milos, Lazar, Vuk, Aleksandar, Stefan, Sava, Petar",
+  	"coach"     : "Zeka",
+  	"assistent" : "Vule",
+  	"id" : "mini-basket",
+  	"leagues"   : "KSNS" 
+  },
+
+  {
+  	"slika"     : "http://www.kkdanubius.rs/images/slike/skola-kosarke2002.jpg", 
+  	"selekcija" : "Juniori",
+  	"team"      : "Milos, Lazar, Vuk, Aleksandar, Stefan, Sava, Petar",
+  	"coach"     : "Zeka",
+  	"assistent" : "Vule",
+  	"id" : "2000-01",
+  	"leagues"   : "KSNS" 
+  },
+
+  {
+  	"slika"     : "http://www.kkdanubius.rs/images/slike/skola-kosarke2002.jpg", 
+  	"selekcija" : "Juniori",
+  	"team"      : "Milos, Lazar, Vuk, Aleksandar, Stefan, Sava, Petar",
+  	"coach"     : "Zeka",
+  	"assistent" : "Vule",
+  	"id" : "2000-01",
+  	"leagues"   : "KSNS" 
+  }
+]

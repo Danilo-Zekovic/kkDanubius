@@ -1,0 +1,20 @@
+[
+	{
+		"photo"       : "http://tweeting.com/wp-content/uploads/2012/11/Green-Waterfall-Header-image.jpg",
+		"titel"       : "one",
+		"description" : "jedan",
+		"active"      : "active"
+	},
+
+	{
+		"photo"       : "http://cdn.twitrcovers.com/wp-content/uploads/2013/08/Sunset-Sea-Nature-l.jpg",
+		"titel"       : "two",
+		"description" : "dva"
+	},
+
+	{
+		"photo"       : "https://s-media-cache-ak0.pinimg.com/originals/92/0f/31/920f3171d16f69c7f8e3930e02269909.jpg",
+		"titel"       : "three",
+		"description" : "tri"
+	}
+]
