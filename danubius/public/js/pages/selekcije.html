@@ -5,43 +5,22 @@
   <p>{{message}}</p>
 </div>
 
-<div class="row main-content">
-  <div class="col-lg-12">
-	<p id="2000-01"><br><br></p>
+<div class="row main-content" ng-repeat="x in selekcije" id='{{x.id}}'>
+  <div class="col-lg-6">
+  	<img ng-src="{{x.slika}}"/>
+  </div>
+  <div class="col-lg-6">
+  	<h2>{{x.selekcija}}</h2>
+  	<p><strong>Clanovi tima: </strong>{{x.team}}</p>
+  	<p><strong>Glavni Treener: </strong>{{x.coach}}</p>
+  	<p><strong>Pomocni Trener: </strong>{{x.assistent}}</p>
+  	<p><strong>Lige: </strong>{{x.leagues}}</p>
+
+
+	<!--p id="2000-01"><br><br></p>
 	<p>Danubius1  sf gfds sdg shsgh sgfh fg hf fgh fgh gfh dfgh fgh fgh fdhfd ghf fgh fgh f fgh fgh fgh fgh fgh fgh fgh hgf hfdhgfh fgh gfh dfg hgf hgf f h df gh dfhgfh dgfh dgh fd hfh fgh gf hgfh gfh f fgh fhgf fgh g fdh fh  h dhgh dghg</p>
-	<img ng-src="{{pic}}" alt="Description"/>
-	<p>Danubius2</p>
-	<p>Danubius3</p>
-	<p>Danubius1</p>
-	<p>Danubius2</p>
-	<p>Danubius3</p>
-	<p>Danubius1</p>
-	<p>Danubius2</p>
-	<p>Danubius3</p>
-	<p id="1998-99"><br><br></p>
-	<p>Danubius1 dadadadadaddaadddada</p>
-	<p>Danubius2</p>
-	<p>Danubius3</p>
-	<p>Danubius1</p>
-	<p>Danubius2</p>
-	<p>Danubius3</p>
-	<p>Danubius1</p>
-	<p>Danubius2</p>
-	<p id="2000-03"><br><br></p>
-	<p>Danubius3 ideeeeemmooooooo </p>
-	<p>Danubius1</p>
-	<p>Danubius2</p>
-	<p>Danubius3</p>
-	<p>Danubius1</p>
-	<p>Danubius2</p>
-	<p>Danubius3</p>
-	<p id="mini-basket"><br><br></p>
-	<p>Danubius1    MINI BASKET</p>
-	<p>Danubius2</p>
-	<p>Danubius3</p>
-	<p>Danubius1</p>
-	<p>Danubius2</p>
-	<p>Danubius3</p>
+	<img ng-src="{{pic}}" alt="Description"/-->
+	
   </div>
 <div>
 
