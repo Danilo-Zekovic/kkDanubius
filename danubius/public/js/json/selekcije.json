@@ -1,7 +1,7 @@
 [
   {
   	"slika"     : "http://www.kkdanubius.rs/images/slike/2000-2001.JPG", 
-  	"selekcija" : "Pioniri",
+  	"selekcija" : "Pioniri1",
   	"team"      : "Milos, Lazar, Vuk, Aleksandar, Stefan, Sava, Petar",
   	"coach"     : "Zeka",
   	"assistent" : "Vule",
@@ -11,7 +11,7 @@
 
   {
   	"slika"     : "http://www.kkdanubius.rs/images/slike/2002%20(1).JPG",
-  	"selekcija" : "Kadeti",
+  	"selekcija" : "Kadeti2",
   	"team"      : "Milos, Lazar, Vuk, Aleksandar, Stefan, Sava, Petar",
   	"coach"     : "Zeka",
   	"assistent" : "Vule",
@@ -21,7 +21,7 @@
 
   {
   	"slika"     : "http://www.kkdanubius.rs/images/slike/skola-kosarke2002.jpg", 
-  	"selekcija" : "Juniori",
+  	"selekcija" : "Juniori3",
   	"team"      : "Milos, Lazar, Vuk, Aleksandar, Stefan, Sava, Petar",
   	"coach"     : "Zeka",
   	"assistent" : "Vule",
@@ -31,7 +31,7 @@
 
   {
   	"slika"     : "http://www.kkdanubius.rs/images/slike/skola-kosarke2002.jpg", 
-  	"selekcija" : "Juniori",
+  	"selekcija" : "mini-basket4",
   	"team"      : "Milos, Lazar, Vuk, Aleksandar, Stefan, Sava, Petar",
   	"coach"     : "Zeka",
   	"assistent" : "Vule",
