@@ -105,11 +105,19 @@ kkDanubius.config(function($routeProvider) {
   })
 
   //route for .js file proba
+  .when('/events',{
+    templateUrl : 'js/pages/events.html',
+    controller  : 'galerijaCtrl'
+  })
+
+  //route for .js file proba
   .when('/kontakt',{
    	templateUrl : 'js/pages/kontakt.html',
    	controller  : 'kontaktCtrl'
   });
 });
+
+/***********************************************************************/
 
 kkDanubius.run(function($rootScope, $location, $anchorScroll, $routeParams) {
   $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
@@ -118,39 +126,108 @@ kkDanubius.run(function($rootScope, $location, $anchorScroll, $routeParams) {
   });
 })
 
-// create the controller and inject Angular's $scope
-kkDanubius.controller('mainCtrl', function($scope) {
+
+/************************************************************************/
+
+/*/ create the controller and inject Angular's $scope
+kkDanubius.controller('mainCtrl', function($scope, $http) {
   // create a message to display in our view
   $scope.message = 'Everyone come and see how good I look!';
+
+  $scope.slides=[];
+
+  $http.get('js/json/home.json').success(function(data){
+    $scope.slides=data;
+  })
 });
 
-kkDanubius.controller('selekcijeCtrl', function($scope) {
-  $scope.message = 'Look! I am an about page.';
-  $scope.pic = "kk-danubius.jpeg"
-});
+/*===========================================================/
+kkDanubius.service("teamService", function($http, $q){
+  var deferred = $q.defer();
+  $http.get('js/json/selekcije.json').then(function(data){
+    deferred.resolve(data);
+  });
 
-kkDanubius.controller('takmicenjaCtrl', function($scope) {
+  this.getTeams = function (){
+    return deferred.promise;
+  }
+})
+
+kkDanubius.controller('selekcijeCtrl', function($scope, teamService) {
+  $scope.message = 'Kosarkaskog Kluba Danubius';
+  var promise = teamService.getTeams();
+  promise.then(function(data){
+    $scope.selekcije = data.data
+  });
+});
+/*===========================================================/
+
+kkDanubius.controller('takmicenjaCtrl', function($scope, $http) {
   $scope.message = 'Contact us! JK. This is just a takmicenja page.';
+
+  $scope.teams=[];
+
+  $http.get('js/json/takmicenja.json').success(function(data){
+    $scope.teams=data;
+  })
 });
+
+/*===========================================================/
 
 kkDanubius.controller('galerijaCtrl', function($scope) {
   $scope.message = 'I am Danilo the owner of this application';
 });
 
-kkDanubius.controller('treneriCtrl', function($scope) {
+/*===========================================================/
+
+kkDanubius.service("treneriService", function($http, $q){
+  var deferred = $q.defer();
+  $http.get('js/json/treneri.json').then(function(data){
+    deferred.resolve(data);
+  });
+
+  this.getTrener = function (){
+    return deferred.promise;
+  }
+})
+
+kkDanubius.controller('treneriCtrl', function($scope, treneriService) {
   $scope.message = 'Hopefully it works',
   $scope.doSomething = doSomething();
+
+  var promise = treneriService.getTrener();
+  promise.then(function(data){
+    $scope.treneri = data.data
+  });
 });
 
-kkDanubius.controller('klubCtrl', function($scope) {
+/*===========================================================/
+
+kkDanubius.controller('klubCtrl', function($scope, $http) {
   $scope.message = 'This is Kosrkaski Klub Danubius';
+
+  $scope.vip=[];
+
+  $http.get('js/json/klub.json').success(function(data){
+    $scope.vip=data;
+  })
+
+  $scope.trofeji=[];
+  $http.get('http://mysafeinfo.com/api/data?list=englishmonarchs&format=json').success(function(data){
+    $scope.trofeji=data;
+  })
 });
+
+/*===========================================================/
 
 kkDanubius.controller('kontaktCtrl', function($scope) {
   $scope.message = 'Call me kk Danubius';
 });
 
-// javascript function 
+/*===========================================================*/
+
+/*/ javascript function 
 var doSomething = function(){
   console.log("In the World!");
 };
+*/
