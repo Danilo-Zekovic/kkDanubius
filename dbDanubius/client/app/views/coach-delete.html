@@ -1,0 +1,8 @@
+<p>This is the coach-delete view.</p>
+<form role="form">
+  <p>Are you sure you wish to delete the coach {{ coach.title }}?</p>
+  <div class="form-group">
+    <input type="submit" class="btn btn-danger" ng-click="deleteCoach()" value="Yes">
+    <button ng-click="back()" type="button" class="btn btn-default">No</button>
+  </div>
+</form>

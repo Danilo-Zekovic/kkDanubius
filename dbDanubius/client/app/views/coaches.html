@@ -1,0 +1,32 @@
+<h1>This is the coaches view.</h1>
+<a class="btn btn-primary" href="/#/create/coach"><span class="glyphicon glyphicon-plus"></span> Create Coach</a>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr><th>Photo</th>
+    <th>Name</th>
+    <th>Team</th>
+    <th>About</th>
+    <th>Awards</th>
+    <th>Operations</th>
+  </tr></thead>
+  <tbody>
+    <tr ng-repeat="coach in coaches">
+      <td><a ng-href="/#/coach/{{ coach._id }}">{{ coach.name }}</a></td>
+      <td>{{ coach.photo }}</td>
+      <td>{{ coach.team }}</td>
+      <td>{{ coach.about }}</td>
+      <td>{{ coach.awards }}</td>
+      <td>
+        <div class="button-group">
+          <a ng-href="/#/coach/{{ coach._id }}/edit" class="btn btn-default">
+            <span class="glyphicon glyphicon-edit"></span>
+          </a>
+          <a ng-href="/#/coach/{{ coach._id }}/delete" class="btn btn-danger">
+            <span class="glyphicon glyphicon-remove-circle"></span>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

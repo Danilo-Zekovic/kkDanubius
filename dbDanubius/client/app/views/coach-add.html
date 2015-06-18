@@ -1,0 +1,24 @@
+<p>This is the coach-add view.</p>
+<form role="form">
+  <div class="form-group">
+    <label for="title" class="control-label">Photo</label>
+    <input type="text" ng-model="coach.photo" class="form-control" id="title" placeholder="Enter the coach photo">
+  </div>
+  <div class="form-group">
+    <label for="title" class="control-label">Name</label>
+    <input type="text" ng-model="coach.name" class="form-control" id="title" placeholder="Enter the coach name">
+  </div>
+  <div class="form-group">
+    <label for="title" class="control-label">Team</label>
+    <input type="text" ng-model="coach.team" class="form-control" id="title" placeholder="Enter the coach team">
+  </div>
+  <div class="form-group">
+    <label for="title" class="control-label">About</label>
+    <input type="text" ng-model="coach.about" class="form-control" id="title" placeholder="Enter the coach about">
+  </div>
+  <div class="form-group">
+    <label for="title" class="control-label">Awards</label>
+    <input type="text" ng-model="coach.awards" class="form-control" id="title" placeholder="Enter the coach awards">
+  </div>
+  <input type="submit" class="btn btn-primary" ng-click="saveCoach()" value="Save">
+</form>
